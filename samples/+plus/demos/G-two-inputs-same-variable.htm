@@ -3,11 +3,11 @@
     <style>
          @import url(../plus.css);
          @import url(../../+micro-charts/micro-chart.css);
-         
+
          div { flow: horizontal; }
          div > * { display:block; margin: 1* 1em; }
          div > svg.chart.donut { size: 20dip; }
-         
+
     </style>
 
     <script type="text/tiscript">
@@ -25,8 +25,8 @@
     <div>
       <svg.chart.donut(val) value="0.0/1.0" />
       <input|decimal(val) min="0" max="1.0" step="0.1" />
-      <input|hslider(val) min="0" max="1.0" step="0.1" />    
+      <input|hslider(val) min="0" max="1.0" step="0.1" />
     </div>
-    
+
 </body>
 </html>

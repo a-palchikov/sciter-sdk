@@ -2,37 +2,36 @@
   <head>
     <title>Plus: function binding</title>
     <style>
-      @import url(../plus.css); 
-      @import url(../../note.css); 
-      
+      @import url(../plus.css);
+      @import url(../../note.css);
+
       output { display: inline-block; border: 1px gray dotted; }
     </style>
-    
+
     <script type="text/tiscript">
-    
+
       include "../plus.tis"; // model below uses @observing decorator defined in plus.tis
-  
+
       namespace Data // our model
-      {  
+      {
         var obj = { a:0, b:32 };
         var sum = 0;
         var src = "?";
-        
+
         // this function is observing any property change in obj
         @observing #changes "obj.*"
-          function calcSum(path /*changed path*/) { 
+          function calcSum(path /*changed path*/) {
             sum = obj.a + obj.b;
             src = path; // report source of the change
           }
 
         @observing #changes "obj.a"
           function changeA() { stdout.println("obj.a changed"); }
-        
+
         @observing #changes "obj.b"
           function changeB() { stdout.println("obj.b changed"); }
-                  
-      }    
-    
+      }
+
     </script>
   </head>
 

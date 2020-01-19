@@ -2,29 +2,29 @@
   <head>
     <title>Plus: function binding</title>
     <style>
-      @import url(../plus.css); 
-      @import url(../../note.css); 
-      
+      @import url(../plus.css);
+      @import url(../../note.css);
+
       output { display: inline-block; border: 1px gray dotted; }
     </style>
-    
+
     <script type="text/tiscript">
-    
+
       include "../plus.tis"; // model below uses @observing decorator defined in plus.tis
-  
+
       namespace Data // our model
-      {  
-        var a = 0; 
+      {
+        var a = 0;
         var b = 32;
         var sum = 0;
-        
+
         // this function is observing 'a' and 'b' and calculates 'sum'
         @observing "a", "b"
-          function calcSum() {
-            sum = a + b;
-          }
-      }    
-    
+        function calcSum() {
+          sum = a + b;
+        }
+      }
+
     </script>
   </head>
 

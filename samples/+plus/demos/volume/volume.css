@@ -1,20 +1,20 @@
-@image-map volume-icons 
+@image-map volume-icons
 {
   src: url(volume-map.png);
   cells: 1 5; /* 1 column, 5 rows */
-  /* logical names of the parts*/ 
+  /* logical names of the parts*/
   items:  vol4,
           vol3,
           vol2,
           vol1,
           vol0;
 }
-   
+
 volume {
-    display:block;
-    width: 41px; height: 8px;
-    foreground-repeat:no-repeat; 
-    prototype: Volume url(volume.tis);
+  display:block;
+  width: 41px; height: 8px;
+  foreground-repeat:no-repeat;
+  prototype: Volume url(volume.tis);
 }
 
 volume[value=4] { foreground-image:image-map(volume-icons,vol4); }

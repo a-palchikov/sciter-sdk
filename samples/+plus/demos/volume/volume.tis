@@ -1,8 +1,9 @@
-class Volume: Behavior
-{  
+class Volume : Behavior
+{
   property value(v)
-  {  // tying 'value' attribute with the 'value' property
-    get return this.attributes["value"].toInteger(0); //'value' here is an integer 
+  {
+    // tying 'value' attribute with the 'value' property
+    get return this.attributes["value"].toInteger(0); // 'value' here is an integer
     set this.attributes["value"] = v.toString();
   }
   function onMouse(evt)
